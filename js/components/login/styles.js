@@ -14,18 +14,18 @@ module.exports = StyleSheet.create({
         bottom: 0,
         left: 0,
         right: 0,
-        backgroundColor: '#0000b3'
+        backgroundColor: '#35229F'
     },
     shadow: {
         flex: 1,
         width: null,
         height: null,
-        backgroundColor: '#0000b3'
+        backgroundColor: '#35229F'
     },
     bg: {
         flex: 1,
         marginTop: deviceHeight/1.75,
-        backgroundColor: '#0000b3',
+        backgroundColor: '#35229F',
         paddingTop: 20,
         paddingLeft: 10,
         paddingRight: 10,

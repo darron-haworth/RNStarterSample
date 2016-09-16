@@ -31,7 +31,7 @@ class Home extends Component {
 
     render() {
         return (
-            <Container theme={myTheme}style={{backgroundColor: '#0000b3'}}>
+            <Container theme={myTheme}style={{backgroundColor: '#35229F'}}>
                 <Header style={{backgroundColor: "#120655"}}>
                     <Button  onPress={() => this.replaceRoute('login')}>
                         <Icon name='ios-power' />

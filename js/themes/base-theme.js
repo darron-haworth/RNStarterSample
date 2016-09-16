@@ -3,7 +3,7 @@ import Color from 'color';
 import {Platform} from 'react-native';
 
 module.exports = {
-    brandPrimary : "orange",
+    brandPrimary : "#A297DE",
     brandInfo: "#5bc0de",
     brandSuccess: "#5cb85c",
     brandDanger: "#d9534f",
