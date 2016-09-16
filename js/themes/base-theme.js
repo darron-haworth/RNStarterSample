@@ -3,12 +3,13 @@ import Color from 'color';
 import {Platform} from 'react-native';
 
 module.exports = {
-    brandPrimary : '#A297DE',
+    brandPrimary : '#E6BC17',
     brandInfo: '#5bc0de',
     brandSuccess: '#5cb85c',
     brandDanger: '#d9534f',
     brandWarning: '#f0ad4e',
     brandSidebar: '#252A30',
+    brandBrightButtonBG: '#E6BC17',
 
     fontFamily: (Platform.OS === 'ios' ) ? 'HelveticaNeue' : 'Roboto',
     btnFontFamily: (Platform.OS === 'ios' ) ? 'HelveticaNeue' : 'Roboto_medium',
