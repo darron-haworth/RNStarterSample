@@ -31,15 +31,15 @@ class Home extends Component {
 
     render() {
         return (
-            <Container theme={myTheme}style={{backgroundColor: '#565051'}}>
+            <Container theme={myTheme}style={{backgroundColor: '#0000b3'}}>
                 <Header>
-                    <Button transparent onPress={() => this.replaceRoute('login')}>
+                    <Button  onPress={() => this.replaceRoute('login')}>
                         <Icon name='ios-power' />
                     </Button>
 
                     <Title>{(this.props.name) ? this.props.name : 'Home'}</Title>
 
-                    <Button transparent onPress={this.props.openDrawer}>
+                    <Button  onPress={this.props.openDrawer}>
                         <Icon name='ios-menu' />
                     </Button>
                 </Header>

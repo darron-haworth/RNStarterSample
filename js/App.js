@@ -21,7 +21,6 @@ let styles = StyleSheet.create({
     },
     box: {
         padding: 10,
-        backgroundColor: 'transparent',
         flex: 1,
         height: height-70
     },
@@ -83,7 +82,7 @@ class App extends Component {
     render() {
         if(this.state.showDownloadingModal)
             return (
-                <Container theme={theme} style={{backgroundColor: theme.defaultBackgroundColor}}>
+                <Container theme={theme} style={{backgroundColor: 'theme.defaultBackgroundColor'}}>
                     <Content style={styles.container}>
                         <Modal style={[styles.modal, styles.modal1]} backdrop={false} ref={'modal'} swipeToClose={false} >
 
