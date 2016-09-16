@@ -208,7 +208,7 @@
 
     "react/display-name": 0,
     "react/jsx-boolean-value": 0,
-    "jsx-quotes": [1, "prefer-double"],
+    //"jsx-quotes": [1, "prefer-double"],
     "react/jsx-sort-props": 0,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1,
