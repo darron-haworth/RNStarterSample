@@ -15,7 +15,7 @@ import Home from './components/home/';
 import BlankPage from './components/blankPage/';
 import SplashPage from './components/splashscreen/';
 import SideBar from './components/sideBar';
-import { statusBarColor } from "./themes/base-theme";
+import { statusBarColor } from './themes/base-theme';
 
 Navigator.prototype.replaceWithAnimation = function (route) {
     const activeLength = this.state.presentedIndex + 1;
@@ -48,19 +48,19 @@ const reducerCreate = params=>{
     return (state, action)=>{
         var currentState = state;
 
-        if(currentState){
+        if (currentState){
             while (currentState.children){
-                currentState = currentState.children[currentState.index]
+                currentState = currentState.children[currentState.index];
             }
         }
         return defaultReducer(state, action);
-    }
+    };
 };
 
 const drawerStyle  = { shadowColor: '#000000', shadowOpacity: 0.8, shadowRadius: 3};
 
 class AppNavigator extends Component {
-    
+
     constructor(props){
         super(props);
     }
@@ -69,17 +69,18 @@ class AppNavigator extends Component {
         globalNav.navigator = this._navigator;
 
         this.props.store.subscribe(() => {
-            if(this.props.store.getState().drawer.drawerState == 'opened')
+            if (this.props.store.getState().drawer.drawerState === 'opened'){
                 this.openDrawer();
-
-            if(this.props.store.getState().drawer.drawerState == 'closed')
+            }
+            if (this.props.store.getState().drawer.drawerState === 'closed'){
                 this._drawer.close();
+            }
         });
 
         BackAndroid.addEventListener('hardwareBackPress', () => {
             var routes = this._navigator.getCurrentRoutes();
 
-            if(routes[routes.length - 1].id == 'home' || routes[routes.length - 1].id == 'login') {
+            if (routes[routes.length - 1].id === 'home' || routes[routes.length - 1].id === 'login') {
                 return false;
             }
             else {
@@ -98,7 +99,7 @@ class AppNavigator extends Component {
     }
 
     closeDrawer() {
-        if(this.props.store.getState().drawer.drawerState == 'opened') {
+        if (this.props.store.getState().drawer.drawerState === 'opened') {
             this._drawer.close();
             this.props.closeDrawer();
         }
@@ -125,7 +126,7 @@ class AppNavigator extends Component {
                     configureScene={(route) => {
                         return Navigator.SceneConfigs.FloatFromRight;
                     }}
-                    initialRoute={{id: (Platform.OS === "android") ? 'splashscreen' : 'login', statusBarHidden: true}}
+                    initialRoute={{id: (Platform.OS === 'android') ? 'splashscreen' : 'login', statusBarHidden: true}}
                     renderScene={this.renderScene}
                   />
             </Drawer>
@@ -152,13 +153,13 @@ function bindAction(dispatch) {
     return {
         closeDrawer: () => dispatch(closeDrawer()),
         popRoute: () => dispatch(popRoute())
-    }
+    };
 }
 
 const mapStateToProps = (state) => {
     return {
         drawerState: state.drawer.drawerState
-    }
-}
+    };
+};
 
-export default connect(mapStateToProps, bindAction) (AppNavigator);
+export default connect(mapStateToProps, bindAction)(AppNavigator);
