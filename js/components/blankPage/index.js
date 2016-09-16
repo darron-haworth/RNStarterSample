@@ -25,13 +25,13 @@ class BlankPage extends Component {
             <Container theme={myTheme} style={{backgroundColor: '#565051'}}>
                 <Header>
                     <Button transparent onPress={() => this.popRoute()}>
-                        <Icon name='ios-arrow-back' />
+                        <Icon name="ios-arrow-back" />
                     </Button>
 
                     <Title>{(name) ? name : 'Blank Page'}</Title>
 
                     <Button transparent onPress={this.props.openDrawer}>
-                        <Icon name='ios-menu' />
+                        <Icon name="ios-menu" />
                     </Button>
                 </Header>
 
@@ -41,7 +41,7 @@ class BlankPage extends Component {
                     </Text>
                 </Content>
             </Container>
-        )
+        );
     }
 }
 
@@ -49,7 +49,7 @@ function bindAction(dispatch) {
     return {
         openDrawer: ()=>dispatch(openDrawer()),
         popRoute: () => dispatch(popRoute())
-    }
+    };
 }
 
 function mapStateToProps(state) {
