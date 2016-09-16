@@ -32,7 +32,7 @@ class Home extends Component {
     render() {
         return (
             <Container theme={myTheme}style={{backgroundColor: '#35229F'}}>
-                <Header style={{backgroundColor: "#120655"}}>
+                <Header style={{backgroundColor: '#120655'}}>
                     <Button  onPress={() => this.replaceRoute('login')}>
                         <Icon name='ios-power' />
                     </Button>
@@ -59,7 +59,7 @@ class Home extends Component {
                     </Grid>
                 </Content>
             </Container>
-        )
+        );
     }
 }
 
@@ -71,7 +71,7 @@ function bindAction(dispatch) {
         replaceOrPushRoute:(route)=>dispatch(replaceOrPushRoute(route)),
         setIndex:(index)=>dispatch(setIndex(index))
 
-    }
+    };
 }
 
 function mapStateToProps(state) {

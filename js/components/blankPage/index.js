@@ -23,7 +23,7 @@ class BlankPage extends Component {
 
         return (
             <Container theme={myTheme} style={{backgroundColor: '#35229F'}}>
-                <Header style={{backgroundColor: "#120655"}}>
+                <Header style={{backgroundColor: '#120655'}}>
                     <Button  onPress={() => this.popRoute()}>
                         <Icon name="ios-arrow-back" />
                     </Button>
