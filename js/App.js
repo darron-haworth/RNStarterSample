@@ -22,7 +22,7 @@ let styles = StyleSheet.create({
     box: {
         padding: 10,
         flex: 1,
-        height: height-70
+        height: height - 70
     },
     space: {
         marginTop: 10,
@@ -38,21 +38,21 @@ let styles = StyleSheet.create({
 
     },
     modal2: {
-        height: height-78,
+        height: height - 78,
         position: 'relative',
         justifyContent: 'center',
     },
 });
 
 class App extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
             showDownloadingModal: false,
             showInstalling: false,
             downloadProgress: 0
-        }
+        };
     }
 
     componentDidMount() {
@@ -80,7 +80,7 @@ class App extends Component {
     }
 
     render() {
-        if(this.state.showDownloadingModal)
+        if (this.state.showDownloadingModal) {
             return (
                 <Container theme={theme} style={{backgroundColor: 'theme.defaultBackgroundColor'}}>
                     <Content style={styles.container}>
@@ -103,11 +103,14 @@ class App extends Component {
                 </Container>
 
             );
+        }
         else
-            return(
+        {
+            return (
                 <AppNavigator store={this.props.store} />
             );
+        }
     }
 }
 
-export default App
+export default App;

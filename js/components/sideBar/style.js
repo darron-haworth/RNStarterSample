@@ -6,11 +6,11 @@ var React = require('react-native');
 var { StyleSheet } = React;
 
 module.exports = StyleSheet.create({
-	sidebar: {
- 		flex: 1,
+    sidebar: {
+        flex: 1,
         padding: 10,
         paddingRight: 0,	        
         paddingTop: 30,
- 		backgroundColor: '#3B326A'
+        backgroundColor: '#3B326A'
     },
 });
